@@ -33,7 +33,7 @@ namespace ThoughtWorks.CruiseControl.UnitTests.Core.Publishers
                 Callback<MailMessage>(message => {
                     Assert.AreEqual("from@foo.com", message.From.Address);
                     Assert.AreEqual("to@bar.com", message.To[0].Address);
-                    Assert.AreEqual("replyto@bar.com", message.ReplyTo.Address);
+                    Assert.AreEqual("replyto@bar.com", message.ReplyToList[0].Address);
                     Assert.AreEqual("test subject", message.Subject);
                     Assert.AreEqual("test message", message.Body);
                 }).Verifiable();

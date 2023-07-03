@@ -1,616 +1,30 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
-    <ProjectGuid>{482EF049-EC0C-4819-B568-75B5F74BDD5B}</ProjectGuid>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ApplicationIcon>
-    </ApplicationIcon>
-    <AssemblyKeyContainerName>
-    </AssemblyKeyContainerName>
+    <TargetFramework>net48</TargetFramework>
     <AssemblyName>ThoughtWorks.CruiseControl.WebDashboard</AssemblyName>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
     <OutputType>Library</OutputType>
     <RootNamespace>ThoughtWorks.CruiseControl.WebDashboard</RootNamespace>
-    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <StartupObject>
-    </StartupObject>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
-    <TargetFrameworkProfile />
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
-    <Use64BitIISExpress />
-    <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <AssemblyTitle>CC.NET Web Dashboard</AssemblyTitle>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile>
-    </ConfigurationOverrideFile>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>bin\ThoughtWorks.CruiseControl.WebDashboard.XML</DocumentationFile>
-    <DebugSymbols>true</DebugSymbols>
-    <FileAlignment>4096</FileAlignment>
-    <NoStdLib>false</NoStdLib>
-    <NoWarn>1591</NoWarn>
-    <Optimize>false</Optimize>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <DebugType>full</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>..\..\Build\WebDashboard\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile>
-    </ConfigurationOverrideFile>
-    <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>
-    </DocumentationFile>
-    <DebugSymbols>false</DebugSymbols>
-    <FileAlignment>4096</FileAlignment>
-    <NoStdLib>false</NoStdLib>
-    <NoWarn>1591</NoWarn>
-    <Optimize>true</Optimize>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <DebugType>none</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Build|AnyCPU' ">
     <OutputPath>..\..\Build\WebDashboard\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile>
-    </ConfigurationOverrideFile>
-    <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>..\..\Build\WebDashboard\ThoughtWorks.CruiseControl.WebDashboard.XML</DocumentationFile>
-    <DebugSymbols>true</DebugSymbols>
-    <FileAlignment>4096</FileAlignment>
-    <NoStdLib>false</NoStdLib>
-    <NoWarn>1591</NoWarn>
-    <Optimize>true</Optimize>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <DebugType>full</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSharpFormat, Version=2.5.3274.32716, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\CSharpFormat.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib, Version=1.4.2.13, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
-      <HintPath>..\packages\SharpZipLib.1.4.2\lib\netstandard2.0\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
-    <Reference Include="NetReflector, Version=1.1.2009.1214, Culture=neutral, PublicKeyToken=2f4dd8b32acbcd8e, processorArchitecture=MSIL">
-      <HintPath>..\packages\NetReflector.1.1.2009\lib\net20\NetReflector.dll</HintPath>
-    </Reference>
-    <Reference Include="NVelocity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
-      <HintPath>..\packages\NVelocity.1.2.0\lib\netstandard2.0\NVelocity.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
-      <Name>System</Name>
-    </Reference>
-    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.Install">
-      <Name>System.Configuration.Install</Name>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web">
-      <Name>System.Web</Name>
-    </Reference>
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Xml">
-      <Name>System.XML</Name>
-    </Reference>
-    <ProjectReference Include="..\core\core.csproj">
-      <Name>core</Name>
-      <Project>{F8113DB9-6C47-4FD1-8A01-655FCF151747}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
-    </ProjectReference>
-    <ProjectReference Include="..\objection\objection.csproj">
-      <Project>{1C0B8046-FE79-4845-84B9-369A76F817A3}</Project>
-      <Name>objection</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Remote\Remote.csproj">
-      <Name>Remote</Name>
-      <Project>{E820CF3B-8C5A-4002-BC16-B7818D3D54A8}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
-    </ProjectReference>
+    <ProjectReference Include="..\core\core.csproj" />
+    <ProjectReference Include="..\objection\objection.csproj" />
+    <ProjectReference Include="..\Remote\Remote.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\CommonAssemblyInfo.cs">
-      <Link>CommonAssemblyInfo.cs</Link>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Configuration\CachingDashboardConfigurationLoader.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Configuration\DashboardConfigurationLoader.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Configuration\IDashboardConfiguration.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Configuration\IPluginConfiguration.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Configuration\IRemoteServicesConfiguration.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Configuration\NetReflectorPluginConfiguration.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Configuration\NetReflectorRemoteServicesConfiguration.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Configuration\ServerLocation.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Configuration\StylesheetConfiguration.cs" />
-    <Compile Include="Dashboard\Actions\HtmlReportAction.cs" />
-    <Compile Include="Dashboard\Actions\XsltParameter.cs" />
-    <Compile Include="Dashboard\CookieSessionStore.cs" />
-    <Compile Include="Dashboard\GenericPlugins\HtmlReportPlugin.cs" />
-    <Compile Include="Dashboard\ImmutableNamedActionWithoutSiteTemplate.cs" />
-    <Compile Include="Dashboard\INoSiteTemplateAction.cs" />
-    <Compile Include="Dashboard\ISecurityPlugin.cs" />
-    <Compile Include="Dashboard\ISessionRetriever.cs" />
-    <Compile Include="Dashboard\ISessionStore.cs" />
-    <Compile Include="Dashboard\LoginViewBuilder.cs" />
-    <Compile Include="Dashboard\ProjectParametersAction.cs" />
-    <Compile Include="Dashboard\IndicatorBarLocation.cs" />
-    <Compile Include="IO\ProgramDataFolder.cs" />
-    <Compile Include="Plugins\Administration\AdministerAction.cs" />
-    <Compile Include="Plugins\Administration\AdministerPlugin.cs" />
-    <Compile Include="Plugins\Administration\ConfigurationAttribute.cs" />
-    <Compile Include="Plugins\Administration\ConfigurationSetting.cs" />
-    <Compile Include="Plugins\Administration\FileLocation.cs" />
-    <Compile Include="Plugins\Administration\Package.cs" />
-    <Compile Include="Plugins\Administration\PackageImportEventArgs.cs" />
-    <Compile Include="Plugins\Administration\PackageManager.cs" />
-    <Compile Include="Plugins\Administration\PackageManifest.cs" />
-    <Compile Include="Plugins\Administration\PackageType.cs" />
-    <Compile Include="Dashboard\RSSLinkBuilder.cs" />
-    <Compile Include="IO\IConditionalGetFingerprintProvider.cs" />
-    <Compile Include="IO\AssemblyVersionProvider.cs" />
-    <Compile Include="IO\ConditionalGetFingerprint.cs" />
-    <Compile Include="Dashboard\ActionDecorators\SiteTemplateActionDecorator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\ActionInstantiatorWithObjectSource.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\Actions\DefaultAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\Actions\MultipleXslReportBuildAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\Actions\XslReportBuildAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\Build.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\BuildLink.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\BuildRequestTransformer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\ConfigurableNamedAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\CruiseManagerBuildNameRetriever.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\CruiseObjectSourceInitializer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\DefaultBuildNameFormatter.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\DefaultLinkFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\DefaultLinkListFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\DefaultPluginLinkCalculator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\FarmLink.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\GeneralAbsoluteLink.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\GenericPlugins\ConfigurablePlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\GenericPlugins\ProjectConfigurableBuildPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\GenericPlugins\XslMultiReportBuildPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\GenericPlugins\XslReportBuildPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IAbsoluteLink.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IActionInstantiator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IAllBuildsViewBuilder.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IBuildLogTransformer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IBuildNameFormatter.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IBuildNameRetriever.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IBuildPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IBuildRetriever.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\ICruiseRequestFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\ILinkFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\ILinkListFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\ImmutableNamedAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\INamedAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IPluginLinkCalculator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IProjectGrid.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IProjectGridAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\IRecentBuildsViewBuilder.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\NameValueCruiseRequestFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\PathMappingMultiTransformer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\ProjectGrid.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\ProjectGridRow.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\ProjectGridSortColumn.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\ProjectLink.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\RecentBuildLister.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\ServerLink.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\ServerQueryingBuildRetriever.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\SideBarViewBuilder.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\TopControlsViewBuilder.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\UnknownBuildException.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Dashboard\VelocityProjectGridAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IO\HttpPathMapper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IO\ICruiseRequest.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IO\InMemoryResponseCache.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IO\IResponseCache.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IO\IVersionProvider.cs" />
-    <Compile Include="IO\RequestWrappingCruiseRequest.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IO\UncombinableFingerprintException.cs" />
-    <Compile Include="MVC\ASPNET\CachedTypeMap.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\ASPNET\HttpHandler.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\BinaryResponse.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\FileTransferResponse.cs" />
-    <Compile Include="MVC\Cruise\BuildCheckingProxyAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\Cruise\CachingActionProxy.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\Cruise\CruiseActionFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\Cruise\CruiseActionProxyAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\Cruise\DefaultCruiseAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\Cruise\ExceptionCatchingActionProxy.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\Cruise\ICruiseAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\Cruise\IErrorViewBuilder.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\Cruise\NoCacheabilityActionProxy.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\Cruise\ProjectCheckingProxyAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\Cruise\ServerCheckingProxyAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\Cruise\SimpleErrorViewBuilder.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\Cruise\UnknownActionAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IO\FingerprintFactory.cs" />
-    <Compile Include="MVC\HtmlFragmentResponse.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\IAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\IActionFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\IFingerprintFactory.cs" />
-    <Compile Include="MVC\IRequest.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\IResponse.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\JsonFragmentResponse.cs" />
-    <Compile Include="MVC\MimeType.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\NameValueCollectionRequest.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\NotModifiedResponse.cs" />
-    <Compile Include="MVC\RedirectResponse.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\RequestController.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\View\IVelocityTransformer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\View\IVelocityViewGenerator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\View\LazilyInitialisingVelocityTransformer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\View\VelocityViewGeneratorWithTransformer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVC\XmlFragmentResponse.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\BuildReport\BuildLogBuildPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\BuildReport\BuildReportBuildPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\BuildReport\BuildReportXslFilename.cs" />
-    <Compile Include="Plugins\BuildReport\BuildReportXslFilenameSerialiser.cs" />
-    <Compile Include="Plugins\BuildReport\BuildReportXslFilenameSerialiserFactory.cs" />
-    <Compile Include="Plugins\BuildReport\FinalBuildStatusPlugin.cs" />
-    <Compile Include="Plugins\BuildReport\HtmlBuildLogAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\BuildReport\LatestBuildReportProjectPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\BuildReport\BuildFileDownload.cs" />
-    <Compile Include="Plugins\BuildReport\XmlBuildLogAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\CCTray\CCTrayDownloadAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\CCTray\CCTrayDownloadPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\FarmReport\CategorizedFarmReportFarmPlugin.cs" />
-    <Compile Include="Plugins\FarmReport\XmlProjectParametersReportAction.cs" />
-    <Compile Include="Plugins\FarmReport\XmlServerReportAction.cs" />
-    <Compile Include="Plugins\FarmReport\FarmReportFarmPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\FarmReport\XmlReportAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\FarmReport\XmlServerSecurityAction.cs" />
-    <Compile Include="Plugins\ForceBuild\ForceBuildXmlAction.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\ProjectReport\OhlohProjectPlugin.cs" />
-    <Compile Include="Plugins\ProjectReport\PackageListAction.cs" />
-    <Compile Include="Plugins\ProjectReport\PackageListPlugin.cs" />
-    <Compile Include="Plugins\ProjectReport\ProjectStatusPlugin.cs" />
-    <Compile Include="Plugins\ProjectReport\ModificationHistoryProjectPlugin.cs" />
-    <Compile Include="Plugins\ProjectReport\ProjectFileDownload.cs" />
-    <Compile Include="Plugins\ProjectReport\ProjectReportProjectPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\ProjectReport\ProjectTimelineAction.cs" />
-    <Compile Include="Plugins\ProjectReport\ProjectTimelinePlugin.cs" />
-    <Compile Include="Plugins\ProjectReport\ServerAuditHistoryProjectPlugin.cs" />
-    <Compile Include="Plugins\ProjectReport\ServerLogProjectPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\ProjectReport\ServerSecurityConfigurationProjectPlugin.cs" />
-    <Compile Include="Plugins\ProjectReport\ServerUserListProjectPlugin.cs" />
-    <Compile Include="Plugins\ProjectReport\ViewConfigurationProjectPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\ProjectReport\ProjectXmlReport.cs" />
-    <Compile Include="Plugins\ProjectReport\ProjectStatusAction.cs" />
-    <Compile Include="Plugins\RSS\RSSFeed.cs" />
-    <Compile Include="Plugins\Security\ChangePasswordSecurityAction.cs" />
-    <Compile Include="Plugins\Security\LogoutSecurityAction.cs" />
-    <Compile Include="Plugins\Security\UserNameSecurityAction.cs" />
-    <Compile Include="Plugins\Security\UserNameSecurityPlugin.cs" />
-    <Compile Include="Plugins\ServerReport\MessageHandlerPlugin.cs" />
-    <Compile Include="Plugins\ServerReport\QueueStatusServerPlugin.cs" />
-    <Compile Include="Plugins\ServerReport\ProjectConfigurationServerPlugin.cs" />
-    <Compile Include="Plugins\ServerReport\ServerAuditHistoryServerPlugin.cs" />
-    <Compile Include="Plugins\ServerReport\ServerInformationServerPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\ServerReport\ServerLogServerPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\ServerReport\ServerReportServerPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\ServerReport\ServerSecurityConfigurationServerPlugin.cs" />
-    <Compile Include="Plugins\ServerReport\ServerUserListServerPlugin.cs" />
-    <Compile Include="Plugins\Statistics\BuildGraph.cs" />
-    <Compile Include="Plugins\Statistics\ProjectStatisticsPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugins\ViewAllBuilds\ViewAllBuildsProjectPlugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Resources\Translations.cs" />
-    <Compile Include="ServerConnection\CruiseServerSnapshotListAndExceptions.cs" />
-    <Compile Include="ServerConnection\CruiseServerSnapshotOnServer.cs" />
-    <Compile Include="ServerConnection\CruiseServerException.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ServerConnection\ICruiseManagerWrapper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ServerConnection\IFarmService.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ServerConnection\ProjectStatusListAndExceptions.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ServerConnection\ProjectStatusOnServer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ServerConnection\ServerAggregatingCruiseManagerWrapper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ServerConnection\UnknownServerException.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Content Include="..\xsl\AlternativeNUnitDetails.xsl">
       <Link>xsl\AlternativeNUnitDetails.xsl</Link>
     </Content>
@@ -847,11 +261,10 @@
     <Content Include="Themes\Obsess\Manifest.xml" />
     <Content Include="xsl\MsTestCover2010.xsl" />
     <Content Include="xsl\ndependreport-ccnet.v2.xsl" />
-    <Content Include="dashboard.config">
+    <Content Update="dashboard.config">
       <SubType>Designer</SubType>
     </Content>
-    <EmbeddedResource Include="Resources\Languages.es.resx" />
-    <EmbeddedResource Include="Resources\Languages.fr.resx">
+    <EmbeddedResource Update="Resources\Languages.fr.resx">
       <LastGenOutput>Languages.fr.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -909,62 +322,30 @@
     <Content Include="templates\UserDiagnostics.vm" />
     <Content Include="templates\UserList.vm" />
     <Content Include="templates\UserNameLogin.vm" />
-    <None Include="packages.config" />
-    <None Include="Themes\liquidBlue\templates\SiteTemplate.vm" />
-    <None Include="Themes\liquidBlue\templates\TopMenu.vm" />
-    <None Include="Themes\noteWorthy\templates\SiteTemplate.vm" />
-    <None Include="Themes\noteWorthy\templates\TopMenu.vm" />
-    <None Include="Themes\Obsess\templates\SiteTemplate.vm" />
-    <Content Include="Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Languages.de.resx" />
-    <EmbeddedResource Include="Resources\Languages.pl.resx" />
-    <EmbeddedResource Include="Resources\Languages.resx">
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="NetReflector" Version="1.1.2009" />
+    <PackageReference Include="NVelocity" Version="1.2.0" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="4.1.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CSharpFormat">
+      <HintPath>..\..\lib\CSharpFormat.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <PostBuildEvent Condition=" '$(OS)' != 'Unix' ">
+      if not exist "$(MSBuildThisFileDirectory)xsl" mkdir "$(MSBuildThisFileDirectory)xsl"
+      xcopy /y /q "$(SolutionDir)xsl\*.xsl" "$(MSBuildThisFileDirectory)xsl"</PostBuildEvent>
+    <PostBuildEvent Condition=" '$(OS)' == 'Unix' ">
+      mkdir -p "$(MSBuildThisFileDirectory)xsl"
+      cp "$(SolutionDir)xsl"/* "$(MSBuildThisFileDirectory)xsl"</PostBuildEvent>
   </PropertyGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-    <PostBuildEvent Condition=" '$(OS)' != 'Unix' ">mkdir "$(ProjectDir)\xsl"
-xcopy/y/q "$(SolutionDir)\xsl\*.xsl" "$(ProjectDir)\xsl"</PostBuildEvent>
-    <PostBuildEvent Condition=" '$(OS)' == 'Unix' ">mkdir -p "$(ProjectDir)xsl"
-cp "$(SolutionDir)xsl"/* "$(ProjectDir)xsl"</PostBuildEvent>
-  </PropertyGroup>
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
-        <WebProjectProperties>
-          <UseIIS>False</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50119</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
-        </WebProjectProperties>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
-  </Target>
 </Project>

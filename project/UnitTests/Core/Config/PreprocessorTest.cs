@@ -542,8 +542,10 @@ namespace ThoughtWorks.CruiseControl.UnitTests.Core.Config
 
         private static XmlReader GetInput(string filename)
         {
-            var settings = new XmlReaderSettings();
-            settings.ProhibitDtd = false;            
+            var settings = new XmlReaderSettings
+            {
+                DtdProcessing = DtdProcessing.Prohibit,
+            };
             return
                 XmlReader.Create( GetManifestResourceStream( filename ), settings );
         }

@@ -65,9 +65,11 @@ namespace ThoughtWorks.CruiseControl.Core.Label
         /// <remarks></remarks>
 		public override string Generate(IIntegrationResult result)
 		{
-			ICruiseManager manager = (ICruiseManager) remotingService.Connect(typeof (ICruiseManager), ServerUri);
+#pragma warning disable CS0618 // Type or member is obsolete
+            ICruiseManager manager = (ICruiseManager) remotingService.Connect(typeof (ICruiseManager), ServerUri);
+#pragma warning restore CS0618 // Type or member is obsolete
 
-			ProjectStatus[] statuses = manager.GetProjectStatus();
+            ProjectStatus[] statuses = manager.GetProjectStatus();
 			foreach (ProjectStatus status in statuses)
 			{
 				if (status.Name == ProjectName)

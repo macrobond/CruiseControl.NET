@@ -113,8 +113,7 @@ namespace ThoughtWorks.CruiseControl.Core.Config
             XmlDocument doc = new XmlDocument();
             
             // Run the config file through the preprocessor.
-            XmlReaderSettings settings2 = new XmlReaderSettings();
-            settings2.ProhibitDtd = false;
+            XmlReaderSettings settings2 = new XmlReaderSettings { DtdProcessing = DtdProcessing.Prohibit };
             using (XmlReader reader = XmlReader.Create(configFile.FullName, settings2))
             {
                 using( XmlWriter writer = doc.CreateNavigator().AppendChild() )
@@ -122,12 +121,14 @@ namespace ThoughtWorks.CruiseControl.Core.Config
                     preprocessor.PreProcess(reader, writer, new XmlUrlResolver(), null);
                 }
             }
-            XmlReaderSettings settings = new XmlReaderSettings();
-		    settings.ConformanceLevel = ConformanceLevel.Auto;
-		    settings.ProhibitDtd = false;
-		    settings.IgnoreWhitespace = true;
+            XmlReaderSettings settings = new XmlReaderSettings
+            {
+                ConformanceLevel = ConformanceLevel.Auto,
+                DtdProcessing = DtdProcessing.Prohibit,
+                IgnoreWhitespace = true
+            };
             // Wrap the preprocessed output with an XmlValidatingLoader
-		    XmlValidatingLoader loader =
+            XmlValidatingLoader loader =
 		        new XmlValidatingLoader( XmlReader.Create( doc.CreateNavigator().ReadSubtree(), settings ) );
 			loader.ValidationEventHandler += handler;
 			return loader;

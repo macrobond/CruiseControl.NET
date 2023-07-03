@@ -6,8 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
-using System.Web;
-using System.Web.Caching;
 using ThoughtWorks.CruiseControl.Core.Config;
 using ThoughtWorks.CruiseControl.Core.Logging;
 using ThoughtWorks.CruiseControl.Core.Queues;
@@ -22,6 +20,8 @@ using ThoughtWorks.CruiseControl.Remote.Security;
 
 namespace ThoughtWorks.CruiseControl.Core
 {
+    using System.Web;
+    using System.Web.Caching;
     using ThoughtWorks.CruiseControl.Core.util;
 
     /// <summary>
@@ -79,9 +79,11 @@ namespace ThoughtWorks.CruiseControl.Core
 			this.executionEnvironment = executionEnvironment;
 
             // Leave the manager for backwards compatability - it is marked as obsolete
-#pragma warning disable 0618
+#pragma warning disable CS0612 // Type or member is obsolete
+#pragma warning disable CS0618 // Type or member is obsolete
             manager = new CruiseManager(this);
-#pragma warning restore 0618
+#pragma warning restore CS0618 // Type or member is obsolete
+#pragma warning restore CS0612 // Type or member is obsolete
             serverClient = new CruiseServerClient(this);
             InitializeServerThread();
 

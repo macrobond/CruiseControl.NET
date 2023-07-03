@@ -89,7 +89,9 @@ namespace ThoughtWorks.CruiseControl.Core
 
         private void RegisterManagerForRemoting()
         {
+#pragma warning disable CS0618 // Type or member is obsolete
             MarshalByRefObject marshalByRef = (MarshalByRefObject)server.CruiseManager;
+#pragma warning restore CS0618 // Type or member is obsolete
             RemotingServices.Marshal(marshalByRef, ManagerUri);
 
             foreach (IChannel channel in ChannelServices.RegisteredChannels)
@@ -164,7 +166,9 @@ namespace ThoughtWorks.CruiseControl.Core
             if (!disableRemoting)
             {
                 Log.Info("Disconnecting remote server: ");
+#pragma warning disable CS0618 // Type or member is obsolete
                 RemotingServices.Disconnect((MarshalByRefObject)server.CruiseManager);
+#pragma warning restore CS0618 // Type or member is obsolete
                 RemotingServices.Disconnect((MarshalByRefObject)server.CruiseServerClient);
                 foreach (IChannel channel in ChannelServices.RegisteredChannels)
                 {

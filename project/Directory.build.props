@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <Company>ThoughtWrosk Inc.</Company>
+    <Product>CruiseControl.NET</Product>
+    <Copyright>Copyright © 2003 - 2014 ThoughtWorks Inc.</Copyright>
+  </PropertyGroup>
+</Project>

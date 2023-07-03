@@ -31,11 +31,13 @@ namespace ThoughtWorks.CruiseControl.Core.Config
                 dummy.EntityHandling = EntityHandling.ExpandEntities;
                 dummy.XmlResolver = resolver;
             }
-            xmlReaderSettings = new XmlReaderSettings();
-            xmlReaderSettings.ValidationType = ValidationType.None;
-            xmlReaderSettings.ProhibitDtd = false;
-            xmlReaderSettings.XmlResolver = resolver;
-            xmlReaderSettings.ConformanceLevel = ConformanceLevel.Auto;
+            xmlReaderSettings = new XmlReaderSettings
+            {
+                ValidationType = ValidationType.None,
+                DtdProcessing = DtdProcessing.Prohibit,
+                XmlResolver = resolver,
+                ConformanceLevel = ConformanceLevel.Auto
+            };
             xmlReaderSettings.ValidationEventHandler += ValidationHandler;
         }
 

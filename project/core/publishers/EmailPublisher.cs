@@ -488,7 +488,7 @@ namespace ThoughtWorks.CruiseControl.Core.Publishers
             MailMessage mailMessage = new MailMessage();
             mailMessage.To.Add(to);
             mailMessage.From = new MailAddress(from);
-            if (!String.IsNullOrEmpty(replyto)) mailMessage.ReplyTo = new MailAddress(replyto);
+            if (!String.IsNullOrEmpty(replyto)) mailMessage.ReplyToList.Add(new MailAddress(replyto));
             mailMessage.Subject = subject;
             mailMessage.IsBodyHtml = true;
             mailMessage.Body = messageText;

@@ -14,7 +14,7 @@ namespace ThoughtWorks.CruiseControl.UnitTests.CCTrayLib.Monitoring
 	{
         private MockRepository mocks = new MockRepository(MockBehavior.Default);
 		private HttpCruiseProjectManager manager;
-        private ICruiseServerManager serverManagerMock;
+        // private ICruiseServerManager serverManagerMock;
         private CruiseServerClientBase serverClient;
 
 		const string CRUISE_SERVER_XML = @"<CruiseControl xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>

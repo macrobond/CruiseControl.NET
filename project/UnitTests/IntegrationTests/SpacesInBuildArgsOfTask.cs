@@ -84,6 +84,7 @@ namespace ThoughtWorks.CruiseControl.UnitTests.IntegrationTests
 
             // load back as xml to we can use a standard way to reformat it a known way back to string
             // makes it easier to compare
+#pragma warning disable CS0618 // Type or member is obsolete
             var xd1 = new System.Xml.XmlDataDocument();
             xd1.LoadXml(pr1config);
             xd1.PreserveWhitespace = false;
@@ -96,6 +97,7 @@ namespace ThoughtWorks.CruiseControl.UnitTests.IntegrationTests
 
 
             var xd3 = new System.Xml.XmlDataDocument();
+#pragma warning restore CS0618 // Type or member is obsolete
             xd3.LoadXml(pr3config);
             xd3.PreserveWhitespace = false;
             var r3 = xd3.InnerText;

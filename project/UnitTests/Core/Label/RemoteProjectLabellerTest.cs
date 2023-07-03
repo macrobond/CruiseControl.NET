@@ -6,7 +6,9 @@ using ThoughtWorks.CruiseControl.Remote;
 
 namespace ThoughtWorks.CruiseControl.UnitTests.Core.Label
 {
-	[TestFixture]
+#pragma warning disable CS0618 // Type or member is obsolete
+
+    [TestFixture]
 	public class RemoteProjectLabellerTest
 	{
 		private Mock<ICruiseManager> mockCruiseManager;

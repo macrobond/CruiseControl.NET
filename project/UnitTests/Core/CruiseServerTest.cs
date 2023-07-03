@@ -18,7 +18,9 @@ using ThoughtWorks.CruiseControl.UnitTests.Remote;
 
 namespace ThoughtWorks.CruiseControl.UnitTests.Core
 {
-	[TestFixture]
+#pragma warning disable CS0618 // Type or member is obsolete
+
+    [TestFixture]
 	public class CruiseServerTest : IntegrationFixture
 	{
         private MockRepository mocks = new MockRepository(MockBehavior.Default);
@@ -268,7 +270,7 @@ namespace ThoughtWorks.CruiseControl.UnitTests.Core
 
             server.CruiseManager.ForceBuild("Project 1", "BuildForcer");
 
-			VerifyAll();
+            VerifyAll();
 		}
 
 		[Test]
