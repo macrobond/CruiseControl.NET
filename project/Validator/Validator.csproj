@@ -10,7 +10,8 @@
     <RootNamespace>Validator</RootNamespace>
     <AssemblyName>CCValidator</AssemblyName>
     <ApplicationIcon>AppIcon.ico</ApplicationIcon>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

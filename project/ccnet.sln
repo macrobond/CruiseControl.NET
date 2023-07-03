@@ -1,5 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9CC052DF-2AFB-4A27-BB68-F8C27C5BA0C8}"
 	ProjectSection(SolutionItems) = preProject
 		..\Tools\ccnet-help.inc.build = ..\Tools\ccnet-help.inc.build
@@ -37,6 +39,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCCmd", "CCCmd\CCCmd.csproj", "{A943CE44-82B8-4000-A0A0-A86FE0051240}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Extensions", "Core.Extensions\Core.Extensions.csproj", "{F5896F45-B5BB-4A7B-AD1A-279CE12A0650}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E14EE67D-C24E-4088-B01B-35B742E99E85} = {E14EE67D-C24E-4088-B01B-35B742E99E85}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communications.Extensions", "Communications.Extensions\Communications.Extensions.csproj", "{A1B0C773-4779-4A1B-AE4E-8A53D73A8BE5}"
 EndProject
@@ -160,5 +165,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5729FDCB-8EF4-4861-8FC9-98C80CA22493}
 	EndGlobalSection
 EndGlobal
